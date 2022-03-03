@@ -1,0 +1,21 @@
+.NumberSpinner {
+    font-size: 1rem;
+
+    display: inline-block;
+    height: 2.5em;
+    padding: .5em;
+
+    border-radius: 2em;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.NumberSpinner input {
+    font-size: 1.5em;
+    height: 1em;
+
+    text-align: center;
+
+    width: 2.5em;
+    padding: 0;
+    border: none;
+}

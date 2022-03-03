@@ -1,0 +1,11 @@
+:root{
+    --clr-primary: rgb(165, 192, 66);
+    --clr-primary-alt: #5b7653;
+
+    --clr-secondary: #f2b931;
+    --clr-secondary-alt: #f56e27;
+
+    --clr-error: #db3d20;
+
+    --clr-disabbled: rgba(0,0,0,0.2);
+}

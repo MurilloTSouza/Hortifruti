@@ -1,0 +1,19 @@
+.NumberSpinner .SpinnerButton {
+    font-size: 1.5em;
+    font-weight: bold;
+
+    display: inline-block;
+    width: 1em;
+    line-height: 1em;
+    text-align: center;
+
+    color: var(--clr-secondary);
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.NumberSpinner .SpinnerButton.disabled {
+    color: var(--clr-disabbled);
+    cursor: default;
+}
