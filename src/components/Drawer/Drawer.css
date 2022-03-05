@@ -1,0 +1,60 @@
+.Drawer {
+    /* Fill page with shadow */
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.Drawer .content {
+    /* Put content in the bottom */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1em; padding-top: 2.6em;
+    background-color: white;
+}
+
+/* close button */
+.Drawer #drawer-x {
+    position: absolute;
+    top: .2em; right: .3em;
+    font-size: 2em;
+}
+
+/* --- React Transition Group --- */
+:root {
+    --transition-duration: 300ms;
+}
+/* background fade */
+.Drawer.enter { 
+    opacity: 0; 
+}
+.Drawer.enter-active { 
+    opacity: 1; 
+    transition: opacity var(--transition-duration); 
+}
+.Drawer.exit {
+    opacity: 1;
+}
+.Drawer.exit-active {
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+}
+
+/* content slide */
+.Drawer.enter .content {
+    bottom: -20px;
+}
+.Drawer.enter-active .content {
+    bottom: 0;
+    transition: bottom var(--transition-duration);
+}
+.Drawer.exit .content {
+    bottom: 0;
+}
+.Drawer.exit-active .content {
+    bottom: -20px;
+    transition: bottom var(--transition-duration);
+}
