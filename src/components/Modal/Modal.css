@@ -1,0 +1,62 @@
+.Modal {
+    /* Fill page with shadow */
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    /* Center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal .content {
+    position: relative;
+    padding: 1em; padding-top: 2.6em;
+    background-color: white;
+}
+
+/* close button */
+.Modal #modal-x {
+    position: absolute;
+    top: .2em; right: .3em;
+    font-size: 2em;
+}
+
+/* --- React Transition Group --- */
+:root {
+    --transition-duration: 300ms;
+}
+/* background fade */
+.Modal.enter { 
+    opacity: 0; 
+}
+.Modal.enter-active { 
+    opacity: 1; 
+    transition: opacity var(--transition-duration); 
+}
+.Modal.exit {
+    opacity: 1;
+}
+.Modal.exit-active {
+    opacity: 0;
+    transition: opacity var(--transition-duration);
+}
+
+/* content slide */
+.Modal.enter .content {
+    bottom: -20px;
+}
+.Modal.enter-active .content {
+    bottom: 0;
+    transition: bottom var(--transition-duration);
+}
+.Modal.exit .content {
+    bottom: 0;
+}
+.Modal.exit-active .content {
+    bottom: -20px;
+    transition: bottom var(--transition-duration);
+}
