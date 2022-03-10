@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 import { IoClose } from 'react-icons/io5';
@@ -6,26 +6,36 @@ import { IoClose } from 'react-icons/io5';
 import './Drawer.css';
 
 interface DrawerProps {
-    isClosed?: boolean,
+    closed?: boolean,
 
     onClose?: () => void
 }
 
 export const Drawer :React.FC<DrawerProps> = (props) => {
 
-    const {isClosed, children} = props;
+    const {closed, children} = props;
+
+    const backgroundRef = useRef(null);
 
     // if not defined just set empty function
     const onClose = props.onClose
         ? props.onClose : () => {} ;
 
+    // if click in background div, close Drawer
+    const handleBackgroundClick = 
+        (event: React.MouseEvent<HTMLDivElement>) => {
+        if(event.target === backgroundRef.current){
+            onClose();
+        }
+    }
+
     return (
         <CSSTransition 
-            in={!isClosed} 
+            in={!closed} 
             timeout={300} 
-            className="Drawer" 
+            className="Drawer"
             unmountOnExit>
-            <div>
+            <div ref={backgroundRef} onClick={handleBackgroundClick} >
 
                 <div className='content'>
                     <IoClose onClick={onClose} id='drawer-x'/>
