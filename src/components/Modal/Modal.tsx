@@ -6,14 +6,14 @@ import { IoClose } from 'react-icons/io5';
 import './Modal.css';
 
 interface ModalProps {
-    closed?: boolean,
+    open?: boolean,
 
     onClose?: () => void
 }
 
 export const Modal :React.FC<ModalProps> = (props) => {
 
-    const {closed, children} = props;
+    const {open, children} = props;
 
     const backgroundRef = useRef(null);
 
@@ -31,7 +31,7 @@ export const Modal :React.FC<ModalProps> = (props) => {
 
     return (
         <CSSTransition 
-            in={!closed} 
+            in={open} 
             timeout={300} 
             className="Modal"
             unmountOnExit>
