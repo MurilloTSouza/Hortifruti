@@ -7,6 +7,11 @@ html, body {
   box-sizing: border-box;
 }
 
+/* --- GLOBAL CLASSES --- */
+.g_light-shadow {
+  box-shadow: 4px 4px 4px var(--clr-light-shadow);
+}
+
 /* --- INPUT --- */
 input:focus, textarea:focus, select:focus{
   outline: none;

@@ -1,0 +1,41 @@
+.Navbar {
+    position: sticky; top: 0;
+}
+
+.Navbar .bar {
+    position: relative;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    /* height = 36px + paddings */
+    width: 100%; height: 68px;
+    padding: 16px;
+    background-color: white;
+}
+.Navbar .bar :not(:first-child) {
+    margin-left: 16px;
+}
+
+.Navbar .menu-icon {
+    font-size: 36px;
+    align-self: flex-start;
+}
+
+.Navbar .dropdown {
+    position: absolute;
+    z-index: 990; /* below bar */
+}
+.Navbar .dropdown .dropdown-list {
+    position: relative; /* CSSTransition */
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+    background-color: white;
+}
+.Navbar .dropdown .dropdown-list :not(:first-child) {
+    margin-top: 24px;
+}

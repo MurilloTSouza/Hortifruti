@@ -1,0 +1,4 @@
+.NavbarItem.active {
+    color: var(--clr-secondary);
+    font-weight: 900;
+}
