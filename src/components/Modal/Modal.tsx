@@ -33,18 +33,19 @@ export const Modal :React.FC<ModalProps> = (props) => {
         <CSSTransition 
             in={open} 
             timeout={300} 
-            className="Modal"
-            unmountOnExit>
-            <div ref={backgroundRef} onClick={handleBackgroundClick} >
+            className="CSSTransition"
+            unmountOnExit><div>
 
-                <div className='content'>
+            <div className="Modal transition_fade" ref={backgroundRef} onClick={handleBackgroundClick} >
+
+                <div className="content transition_slideup">
                     <IoClose onClick={onClose} id='modal-x'/>
 
                     {children}
 
                 </div>
-
             </div>
-        </CSSTransition>
+
+        </div></CSSTransition>
     )
 }
