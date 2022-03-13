@@ -1,0 +1,54 @@
+:root {
+    --transition-duration: 300ms;
+}
+
+/* --- Fade --- */
+.CSSTransition .transition_fade {
+    transition: all var(--transition-duration);
+}
+.CSSTransition.enter .transition_fade { 
+    opacity: 0; 
+}
+.CSSTransition.enter-active .transition_fade { 
+    opacity: 1;
+}
+.CSSTransition.exit .transition_fade {
+    opacity: 1;
+}
+.CSSTransition.exit-active .transition_fade {
+    opacity: 0;
+}
+
+/* --- SlideDown --- */
+.CSSTransition .transition_slidedown {
+    transition: all var(--transition-duration);
+}
+.CSSTransition.enter .transition_slidedown {
+    bottom: 20px;
+}
+.CSSTransition.enter-active .transition_slidedown {
+    bottom: 0;
+}
+.CSSTransition.exit .transition_slidedown {
+    bottom: 0;
+}
+.CSSTransition.exit-active .transition_slidedown {
+    bottom: 20px;
+}
+
+/* --- SlideUp --- */
+.CSSTransition .transition_slideup {
+    transition: all var(--transition-duration);
+}
+.CSSTransition.enter .transition_slideup {
+    bottom: -20px;
+}
+.CSSTransition.enter-active .transition_slideup {
+    bottom: 0;
+}
+.CSSTransition.exit .transition_slideup {
+    bottom: 0;
+}
+.CSSTransition.exit-active .transition_slideup {
+    bottom: -20px;
+}

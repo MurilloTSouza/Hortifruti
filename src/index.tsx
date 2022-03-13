@@ -6,6 +6,7 @@ import App from './App';
 
 import './index.css';
 import './colorPalette.css';
+import './CSSTransition.css';
 
 ReactDOM.render(
   <React.StrictMode>
