@@ -9,7 +9,7 @@ html, body {
 
 /* --- GLOBAL CLASSES --- */
 .g_light-shadow {
-  box-shadow: 4px 4px 4px var(--clr-light-shadow);
+  box-shadow: 0 4px 4px var(--clr-light-shadow);
 }
 
 /* --- INPUT --- */
