@@ -11,7 +11,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
     const {onClick, children} = props;
 
     return (
-        <button onClick={onClick} className='Button'>
+        <button onClick={onClick} className='Button g_ellipsis-text'>
             {children}
         </button>
     )
