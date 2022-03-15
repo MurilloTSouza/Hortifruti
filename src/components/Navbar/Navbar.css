@@ -15,7 +15,7 @@
     padding: 16px;
     background-color: white;
 }
-.Navbar .bar :not(:first-child) {
+.Navbar .bar > :not(:first-child) {
     margin-left: 16px;
 }
 
@@ -36,6 +36,6 @@
     padding: 24px;
     background-color: white;
 }
-.Navbar .dropdown .dropdown-list :not(:first-child) {
+.Navbar .dropdown .dropdown-list > :not(:first-child) {
     margin-top: 24px;
 }
