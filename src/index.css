@@ -12,6 +12,13 @@ html, body {
   box-shadow: 0 4px 4px var(--clr-light-shadow);
 }
 
+.g_ellipsis-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
 /* --- INPUT --- */
 input:focus, textarea:focus, select:focus{
   outline: none;
