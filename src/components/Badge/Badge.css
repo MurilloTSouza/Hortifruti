@@ -1,0 +1,6 @@
+.Badge {
+    font-size: .8em;
+    color: white;
+    background-color: var(--clr-error);
+    padding: 2px 8px;
+}
