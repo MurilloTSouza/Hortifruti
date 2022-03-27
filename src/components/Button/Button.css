@@ -1,9 +1,8 @@
 .Button {
     font-size: 1rem;
-    
-    font-weight: bold;
+    font-family: 'Fredoka';
+    font-weight: 500;
 
-    height: 2.5em;
     width: 100%;
     border: none;
     border-radius: 2em;
@@ -11,4 +10,12 @@
 
     background-color: var(--clr-primary);
     color: white;
+
+    /* only to limit text size if has icon */
+    display: flex;
+    flex-direction: row;
+}
+
+.Button svg {
+    font-size: 1.2em;
 }
