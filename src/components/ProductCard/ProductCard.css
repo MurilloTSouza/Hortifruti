@@ -1,13 +1,13 @@
 .ProductCard {
     position: relative;
     max-width: 200px;
-    padding: 24px;
-    background-color: w;
+    padding: 16px;
+    background-color: white;
 }
 
 .ProductCard .Badge {
     position: absolute;
-    left: 24px; top: 24px;
+    left: 16px; top: 16px;
 }
 
 .ProductCard .content-wrapper{
