@@ -20,8 +20,8 @@ export const Navbar :React.FC<NavbarProps> = (props) => {
         setShowMenu(!showMenu);
     }
 
-    const isMobile = useMediaQuery({
-        query: '(max-width: 480px)'
+    const isDesktop = useMediaQuery({
+        query: '(min-width: 480px)'
     })
 
     const menuIcon = 
@@ -33,11 +33,11 @@ export const Navbar :React.FC<NavbarProps> = (props) => {
         <div className='Navbar'>
             
             <div className='bar g_light-shadow'>
-                { isMobile ? menuIcon : null }
-                { !isMobile? children : null }
+                { !isDesktop ? menuIcon : null }
+                { isDesktop ? children : null }
             </div>
 
-            <CSSTransition in={isMobile && showMenu}
+            <CSSTransition in={ !isDesktop && showMenu}
                 timeout={300} 
                 className='dropdown CSSTransition'
                 unmountOnExit><div>
