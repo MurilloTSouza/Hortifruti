@@ -1,0 +1,32 @@
+.ProductList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8px;
+}
+
+.ProductList > div {
+    /* equal sizes */
+    width: 0; flex-grow: 1;
+    margin: 8px; /* min space between */
+
+    font-size: .75em; /* smaller on mobile */
+    min-width: min(
+        /* 50% - item margins */
+        calc(50% - 16px), /* keep 2 items in a row */
+        170px ); /* but not if screen is big */
+}
+
+/* Desktop */
+@media screen and (min-width: 480px) {
+    .ProductList > div {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
