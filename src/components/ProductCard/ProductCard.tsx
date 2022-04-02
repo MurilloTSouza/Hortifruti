@@ -2,25 +2,13 @@ import React from 'react';
 
 import { FaCartPlus } from 'react-icons/fa';
 import { MdOutlineImage } from 'react-icons/md';
+import { Product } from '../../models/Product/Product';
 import { Badge } from '../Badge/Badge';
 
 import { Button } from '../Button/Button';
 import { Currency } from '../Currency/Currency';
 
 import './ProductCard.css';
-
-export type Product = {
-    id: string,
-    name: string,
-    price: number,
-
-    discount?: {
-        percentage: number,
-        finalPrice: number
-    },
-
-    outOfStock?: boolean
-}
 
 interface ProductCardProps {
     product: Product
@@ -29,22 +17,14 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = (props) => {
     
     const {product} = props;
-
-    var finalPrice = product.discount // if has discount
-        ? product.discount.finalPrice // finalPrice = price with discount
-        : product.price;              // if not, finalPrice = original price
-
-    var preDiscountPrice = product.discount // if has discount
-        ? product.price                     // preDiscountPrice = original price
-        : null;                             // if not, null value
     
     return (
         <div className='ProductCard g_light-shadow'>
 
             {
-                product.discount
+                product.discountPercent
                     ? <Badge>
-                        {product.discount.percentage}% OFF
+                        {product.discountPercent}% OFF
                       </Badge>
                     : null
             }
@@ -62,14 +42,14 @@ export const ProductCard: React.FC<ProductCardProps> = (props) => {
                 <div className='price-container'>
                     <span className='pre-discount-price'>
                         {
-                            preDiscountPrice
-                                ? <Currency value={preDiscountPrice}/>
+                            product.discountPercent
+                                ? <Currency value={product.price}/>
                                 : null
                         }
                     </span>
                     
                     <span className='final-price'>
-                        <Currency value={finalPrice}/>
+                        <Currency value={product.getFinalPrice()}/>
                     </span>
                 </div>
 
