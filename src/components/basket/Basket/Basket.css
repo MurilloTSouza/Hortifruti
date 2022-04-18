@@ -1,0 +1,29 @@
+.Basket .icon-wrapper {
+    position: relative;
+
+    /* same size as navbar */
+    height: 36px; width: 36px;
+    border-radius: 50%;
+
+    font-size: 28px;
+    color: white;
+    background-color: var(--clr-primary);
+}
+.Basket #icon {
+    position: relative;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.Basket #counter {
+    display: inline-block;
+    position: absolute;
+
+    top: -4px; right: -4px;
+
+    font-size: .5em;
+    text-align: center;
+    width: 1.2em; line-height: 1.2em;
+    border-radius: 50%;
+
+    background-color: var(--clr-error);
+}

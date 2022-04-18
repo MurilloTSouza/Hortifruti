@@ -1,0 +1,59 @@
+.BasketItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 16px;
+    border-bottom: 1px solid var(--clr-disabbled);
+}
+
+.BasketItem .column {
+    display: flex;
+    flex-direction: column;
+}
+.BasketItem .column .push-to-bottom {
+    margin-top: auto; /* push everything benehat to bottom */
+}
+
+.BasketItem .column.left {
+    min-width: 64px; /* allow shrink */
+}
+.BasketItem .column.right {
+    margin-left: 16px;
+    flex-shrink: 0; /* don't shrink */
+}
+
+.BasketItem .name {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.BasketItem .price {
+    margin-top: 8px;
+}
+.BasketItem .price-description {
+    font-size: .9em;
+}
+
+.BasketItem .unit {
+    font-weight: 300;
+    color: var(--clr-light-dark);
+}
+.BasketItem .unit .price-value {
+    font-size: 1em;
+}
+
+.BasketItem .subtotal .price-value {
+    font-size: 1.3em;
+}
+
+.BasketItem .image-wrapper {
+    width: 100%; height: 64px;
+}
+.BasketItem .image-wrapper :first-child {
+    width: 100%; height: 100%;
+}
+
+.BasketItem .NumberSpinner {
+    font-size: .8em;
+}

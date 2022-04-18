@@ -1,0 +1,61 @@
+.BasketList {
+    width: 100%;
+}
+@media screen and (min-width: 480px){
+    .BasketList {
+        width: 400px;
+    }
+}
+
+/* 
+    TODO: needs height to scroll works.
+          have to find a way of setting static height,
+          inside Modal.container wich dont have a static height.
+*/
+.BasketList .scroll-items {
+    overflow: auto;
+    max-height: calc(80vh - 120px - 36px);
+}
+
+.BasketList section,
+.BasketList footer {
+    height: 120px;
+    padding: 36px;
+    background-color: #eee;
+
+    /* center content */
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+/* footer */
+.BasketList footer > :not(:first-child) {
+    margin-top: 8px;
+}
+.BasketList footer .total {
+    color: var(--clr-secondary);
+    font-size: 2rem; font-weight: 500;
+    text-align: center;
+}
+.BasketList footer .description {
+    font-size: 0.7rem; font-weight: 400;
+}
+.BasketList footer > .Button {
+    width: 150px;
+}
+
+/* empty basket */
+.BasketList .empty-basket {
+    position: relative;
+}
+.BasketList .empty-basket .background {
+    position: absolute;
+    height: 100%; width: 100%;
+    color: rgba(0, 0, 0, 0.05);
+}
+.BasketList .empty-basket > span {
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--clr-disabbled);
+    z-index: 10;
+}
